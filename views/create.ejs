@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>time to write a new blog</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet facere et earum amet sapiente rem harum tenetur a illum quasi?</p>
+    <nav>
+        <a href="/">Blogs</a>
+        <a href="/about">About</a>
+        <a href="/blogs/create">New Blog</a>
+    </nav>
+    <form action = "/blogs" method = 'POST'>
+        <label for="title">Blog Title</label>
+        <input type="text" id="title" name = "title" required>
+
+        <label for="snippet">Blog Snippet</label>
+        <input type="text" id="snippet" name = "snippet" required>
+
+        <label for="body">Blog Body</label>
+        <input type="text" id="body" name = "body" required>
+
+        <button>Submit</button>
+
+    </form>
+</body>
+</html>

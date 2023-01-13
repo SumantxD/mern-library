@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- the below will run as js on the server not on the front-end -->
+    <% const name = 'mario this is done through ssr' %>
+    <!--  but now inside this template we could output name somewhere if we wnated to  -->
+
+    <%=name%>
+    <h1>Home</h1>
+    <h1>
+        <u>
+            <%=title%>
+        </u>
+    </h1>
+    <h2>this is the home aka the index page</h2>
+    <nav>
+        <a href="/">Blogs</a>
+        <a href="/about">About</a>
+        <a href="/blogs/create">New Blog</a>
+    </nav>
+
+    <!-- //we will list all hte blogs here -->
+    <!-- //but before we will check if the blogs array is not-empty -->
+
+    <% if(blogs.length > 0){ %>
+
+       <% blogs.forEach(blog =>{ %>
+            
+            <a href="/blogs/<%= blog._id %>">
+                <h3>
+                    <%= blog.title%>
+                </h3>
+                
+                <p>
+                    <%= blog.snippet%>
+                </p>
+            </a>
+
+        <% }) %>
+
+    <% }else{ %>
+        <p> there are no blogs to display.. </p>
+    <% } %>
+
+</body>
+</html>
